@@ -1,5 +1,3 @@
-# -- coding: cp1251 --
-
 def sum(n):
     sd = 0
     for i in range(1, n + 1):
@@ -12,4 +10,4 @@ n = int(input("n = "))
 for x in range(2, n):
     y = sum(x) - x
     if (sum(y)-y) == x and (sum(x)-x) == y and x != y and (y - x) > 0:
-        print(x, "i", y, "- дружні числа")
+        print(x, "i", y, "- Г¤Г°ГіГ¦Г­Ві Г·ГЁГ±Г«Г ")
