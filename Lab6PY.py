@@ -10,4 +10,4 @@ n = int(input("n = "))
 for x in range(2, n):
     y = sum(x) - x
     if (sum(y)-y) == x and (sum(x)-x) == y and x != y and (y - x) > 0:
-        print(x, "i", y, "- äðóæí³ ÷èñëà")
+        print(x, "i", y, "- дружні числа")
