@@ -6,18 +6,18 @@ m = 0
 min = n ** 2 
 a[n // 2][n // 2] = n ** 2
 
-for v in range(n // 2):
+for k in range(n // 2):
     for i in range(n - m):
-        a[v][i + v] = num
+        a[k][i + k] = num
         num = num + 1
-    for i in range(v + 1, n - v):
-        a[i][-v - 1] = num
+    for i in range(k + 1, n - k):
+        a[i][-k - 1] = num
         num = num + 1
-    for i in range(v + 1, n - v):
-        a[-v - 1][- i - 1] =num
+    for i in range(k + 1, n - k):
+        a[-k - 1][- i - 1] =num
         num = num + 1
-    for i in range(v + 1, n - v - 1):
-        a[-i - 1][v]=num
+    for i in range(k + 1, n - k - 1):
+        a[-i - 1][k]=num
         num = num + 1
     m = m + 2
 
