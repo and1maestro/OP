@@ -1,6 +1,8 @@
+# -*- coding: cp1251 -*-
+
 def input_text_in_file(file_name):
     with open(file_name, "w") as my_file:
-        print("Enter text(Г№Г®ГЎ Г§ГіГЇГЁГ­ГЁГІГЁ ГўГўГҐГ¤ГҐГ­Г­Гї, Г§Г Г¦Г¬ВіГІГј Гі Г­Г®ГўГ®Г¬Гі ДџГїГ¤ГЄГі ctrl + Z Ві ГЇВіГ¤ГІГўГҐДџГ¤ВіГІГј ГЄГ«Г ГўВіГёГ®Еџ enter):")
+        print("Enter text(щоб зупинити введення, зажміть у новому рядку ctrl + Z і підтвердіть клавішою enter):")
         try:
             while(True): 
                 my_file.write(input() + "\n")
@@ -9,7 +11,7 @@ def input_text_in_file(file_name):
     pass
 
 def output_text_from_file(file_name):
-    print("\nГ‚Г¬ВіГ±ГІ ГґГ Г©Г«Гі " + file_name + ":")
+    print("\nВміст файлу " + file_name + ":")
     with open(file_name, "r") as my_file:
         print(my_file.read())
     pass
@@ -29,9 +31,9 @@ file_name = "111.txt"
 input_text_in_file(file_name)
 output_text_from_file(file_name)
 
-symbol = input("Г‚ГўГҐГ¤ВіГІГј ГЎГ Г¦Г Г­Гі Г«ВіГІГҐДџГі: ")
+symbol = input("Введіть бажану літеру: ")
 words_with_symbol = find_words_with_symbol(file_name, symbol)
-print("\nГ‘Г«Г®ГўГ , Г№Г® ГЇГ®Г·ГЁГ­Г ЕџГІГјГ±Гї Г­Г  Г§Г Г¤Г Г­Гі Г«ВіГІГҐДџГі:\n" + words_with_symbol + "\n")
+print("\nСлова, що починаються на задану літеру:\n" + words_with_symbol + "\n")
 
 new_file_name = "new_file.txt"
 input_words_in_new_file(new_file_name, words_with_symbol)
